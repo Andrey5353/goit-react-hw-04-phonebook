@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import css from 'components/App.module.css';
 
@@ -50,4 +51,11 @@ export const ContactForm = ({ onSubmit }) => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  state: PropTypes.shape({
+    name: PropTypes.number.isRequired,
+    number: PropTypes.number.isRequired,
+  }),
 };

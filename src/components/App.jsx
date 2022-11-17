@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { ContactForm } from 'components/ContactForm';
 import { ContactList } from 'components/ContactList';
@@ -71,4 +72,11 @@ export const App = () => {
       </div>
     </section>
   );
+};
+
+App.propTypes = {
+  state: PropTypes.shape({
+    contacts: PropTypes.array.isRequired,
+    filter: PropTypes.string.isRequired,
+  }),
 };
